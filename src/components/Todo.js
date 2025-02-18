@@ -26,14 +26,14 @@ const Todo = ({todos, setTodos}) => {
           <button onClick={handleClick}>Add Todo</button>
           </span>
 
-          <div>
+          <ul>
             {todos.length > 0 && todos.map((todo, index)=> (
-              <div key={index} style={{display: 'flex', justifyContent:'space-around', alignItems: 'center'}}>
+              <li key={index} style={{display: 'flex', justifyContent:'space-around', alignItems: 'center'}}>
                 <p>{todo.text}</p>
                 <button onClick={()=>handleDelete(todo.id)}>Delete</button>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
   )
 }
